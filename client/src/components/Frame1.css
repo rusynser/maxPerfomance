@@ -1,0 +1,180 @@
+.profile-picture-icon2,
+.profile-picture-icon3 {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  width: 39px;
+  height: 41px;
+}
+.profile-picture-icon3 {
+  top: 59px;
+  left: 337px;
+}
+.profile-picture-icon4,
+.profile-picture-icon5 {
+  position: absolute;
+  top: 100px;
+  left: 16px;
+  width: 39px;
+  height: 41px;
+}
+.profile-picture-icon5 {
+  top: 141px;
+  left: 337px;
+}
+.profile-picture-icon6,
+.profile-picture-icon7 {
+  position: absolute;
+  top: 238px;
+  left: 16px;
+  width: 39px;
+  height: 41px;
+}
+.profile-picture-icon7 {
+  top: 321px;
+  left: 337px;
+}
+.icons1,
+.label4 {
+  position: absolute;
+}
+.icons1 {
+  top: 18px;
+  left: 337px;
+  width: 31px;
+  height: 31px;
+}
+.label4 {
+  top: calc(50% - 8px);
+  left: calc(50% - 48.5px);
+  line-height: 100%;
+  font-weight: 600;
+  display: none;
+}
+.fixed-button3,
+.message1 {
+  position: absolute;
+  text-align: left;
+}
+.fixed-button3 {
+  top: 377px;
+  left: -6px;
+  border-radius: var(--br-5xs);
+  background-color: #e6e6e6;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  width: 387px;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.message1 {
+  top: 389px;
+  left: 22px;
+  line-height: 100%;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+.icon-send-plane {
+  position: absolute;
+  top: 373px;
+  left: 327px;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+}
+.create-task {
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: calc(50% - 25px);
+  line-height: 100%;
+  font-weight: 600;
+}
+.fixed-button4 {
+  position: absolute;
+  top: 23px;
+  left: 55px;
+  border-radius: var(--br-xl);
+  background-color: var(--white);
+  border: 2px solid var(--color-mediumturquoise);
+  box-sizing: border-box;
+  width: 220px;
+  height: 31px;
+  overflow: hidden;
+}
+.create-task1 {
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: calc(50% - 24px);
+  line-height: 100%;
+  font-weight: 600;
+}
+.fixed-button5,
+.fixed-button6,
+.fixed-button7 {
+  position: absolute;
+  top: 65px;
+  left: 117px;
+  border-radius: var(--br-xl);
+  background-color: var(--white);
+  border: 2px solid var(--color-mediumturquoise);
+  box-sizing: border-box;
+  width: 220px;
+  height: 31px;
+  overflow: hidden;
+}
+.fixed-button6,
+.fixed-button7 {
+  top: 105px;
+  left: 55px;
+}
+.fixed-button7 {
+  top: 146px;
+  left: 117px;
+}
+.create-task4 {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 51px);
+  line-height: 100%;
+  font-weight: 600;
+}
+.fixed-button8 {
+  position: absolute;
+  top: 187px;
+  left: 55px;
+  border-radius: var(--br-xl);
+  border: 2px solid var(--color-mediumturquoise);
+  width: 220px;
+  height: 82px;
+}
+.fixed-button8,
+.fixed-button9,
+.profile-picture-root {
+  background-color: var(--white);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fixed-button9 {
+  position: absolute;
+  top: 285px;
+  left: 117px;
+  border-radius: var(--br-xl);
+  border: 2px solid var(--color-mediumturquoise);
+  width: 220px;
+  height: 67px;
+}
+.profile-picture-root {
+  position: relative;
+  border-radius: var(--br-11xl);
+  border: 5px solid var(--color-darkcyan);
+  width: 386px;
+  height: 422px;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  font-size: var(--body-1-size);
+  color: var(--black);
+  font-family: var(--body-1);
+}
