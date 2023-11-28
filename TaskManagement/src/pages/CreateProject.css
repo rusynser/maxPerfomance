@@ -1,0 +1,358 @@
+.rec {
+  position: absolute;
+  top: 100px;
+  left: -5px;
+  background-color: var(--color-mediumturquoise);
+  width: 1985px;
+  height: 920px;
+}
+.task-name {
+  position: relative;
+  font-size: var(--h4-size);
+  line-height: 48px;
+  font-weight: 600;
+  display: none;
+}
+.span {
+  font-size: var(--body-1-size);
+  color: var(--black);
+}
+.priority {
+  position: relative;
+  line-height: 24px;
+  display: none;
+  font-size: var(--font-size-21xl);
+  color: var(--color-gray-100);
+}
+.this-is-a-social-media-post {
+  margin-block-start: 0;
+  margin-block-end: 32px;
+}
+.uxdesign {
+  color: var(--black);
+}
+.uxdesign-figmacommunity {
+  margin: 0;
+}
+.message {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+  white-space: pre-wrap;
+}
+.content {
+  align-self: stretch;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--color-gray-200);
+}
+.social-media-post-cardyesno-child {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 0;
+  flex-shrink: 0;
+  display: none;
+}
+.share-android-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.label {
+  position: relative;
+  line-height: 100%;
+  font-weight: 600;
+}
+.footer,
+.share-button {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+}
+.share-button {
+  border-radius: var(--br-5xs);
+  height: 32px;
+  overflow: hidden;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xs) 0 var(--padding-5xs);
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+}
+.footer {
+  align-self: stretch;
+  justify-content: space-between;
+  text-align: center;
+}
+.social-media-post-cardyesno {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  border: 2px solid var(--medium-gray);
+  box-sizing: border-box;
+  width: 1400px;
+  height: 793px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl);
+  gap: var(--gap-5xl);
+  font-size: var(--body-1-size);
+  color: var(--dark-gray);
+}
+.span2 {
+  font-size: var(--body-1-size);
+}
+.span1 {
+  color: var(--black);
+  font-size: 64px;
+}
+.description {
+  border: none;
+  position: absolute;
+  top: 259px;
+  left: 46px;
+  line-height: 24px;
+  color: var(--color-gray-100);
+  font-size: 30px;
+}
+.frame-child {
+  position: absolute;
+  top: 121px;
+  left: 0;
+  width: 1381px;
+  height: 456px;
+}
+.frame-inner,
+.frame-item {
+  position: absolute;
+  top: 212px;
+  left: -1px;
+  width: 1873px;
+  height: 2px;
+}
+.frame-inner {
+  top: 349px;
+}
+.project-name {
+  position: absolute;
+  border: none;
+  top: 145px;
+  left: 34px;
+  line-height: 24px;
+  color: #cbcccb;
+  font-size: 50px;
+}
+.iconhamburger {
+  position: absolute;
+  top: 13px;
+  left: -1px;
+  width: 42px;
+  height: 44px;
+}
+.project-name1 {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header-info {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 1233px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.social-media-post-cardyesno-parent {
+  position: absolute;
+  top: 100px;
+  left: 44px;
+  width: 1888px;
+  height: 797px;
+  font-size: var(--font-size-21xl);
+}
+.white-space {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  width: 919px;
+  height: 32px;
+}
+.icon,
+.search {
+  position: relative;
+}
+.search {
+  flex: 1;
+  line-height: 24px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.input-text {
+  position: relative;
+  line-height: 24px;
+  display: none;
+}
+.search-bar {
+  position: absolute;
+  top: 16px;
+  left: 751px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  border: 2px solid var(--medium-gray);
+  box-sizing: border-box;
+  width: 479px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-base);
+  gap: var(--gap-base);
+}
+.avatar-icon {
+  position: absolute ;
+  top: -60px;
+  left: 1170px;
+  width: 57px;
+  height: 57px;
+}
+.actions {
+  position: absolute;
+  top: 16px;
+  left: 1739px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.stylestandar {
+  position: relative;
+  background-color: var(--color-mediumturquoise);
+  width: 1982px;
+  height: 72px;
+}
+.horizontal-nav-bar-desktop-web {
+  position: absolute;
+  top: -17px;
+  left: -34px;
+  border-radius: 5px;
+  border: 1px dashed transparent;
+  box-sizing: border-box;
+  width: 2081px;
+  height: 154px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 32px;
+}
+.maxperformance1-2-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 179px;
+  height: 179px;
+  object-fit: cover;
+}
+.label3 {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 55px);
+  line-height: 100%;
+  font-weight: 600;
+}
+.fixed-button2 {
+  position: absolute;
+  top: 866px;
+  left: 1729px;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-mediumturquoise);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  width: 162px;
+  height: 62px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+.create-project {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 1020px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--body-1-size);
+  color: var(--black);
+  font-family: var(--body-1);
+}
+.cansel {
+  position: absolute;
+  top: 800px;
+  left: 1000px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.canselText {
+  position:relative;
+  top: calc(50% - 25px);
+  left:20;
+  line-height: 100%;
+  font-weight: 600;
+  font-size: 15px;
+}
+.Sign {
+  position: relative;
+  top: calc(50% - 15px);
+  left: 1px;
+  line-height: 100%;
+  font-weight: 600;
+}
+.SignButton {
+  position: absolute;
+  top: 50px;
+  left: 1300px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.createNewProject {
+  position: absolute;
+  top: 900px;
+  left: 1250px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.createProjectText {
+  position: relative;
+  top: calc(50% - 25px);
+  left: 1px;
+  line-height: 100%;
+  font-weight: 600;
+}
