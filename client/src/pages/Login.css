@@ -1,0 +1,273 @@
+.image-2-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1249px;
+  height: 1020px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.group-child,
+.login-child {
+  position: absolute;
+  top: 1310px;
+  left: 1007px;
+  width: 100px;
+  height: 100px;
+}
+.group-child {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
+  border: 0.5px solid #878787;
+  box-sizing: border-box;
+  width: 505px;
+  height: 868px;
+}
+.lorem-ipsum-is,
+.sign-in {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.sign-in {
+  top: 0;
+  font-weight: 500;
+  width: 105px;
+  height: 58.2px;
+}
+.lorem-ipsum-is {
+  top: 59.44px;
+  font-size: var(--font-size-base);
+  width: 260px;
+  height: 29.72px;
+}
+.sign-in-parent,
+.welcome {
+  position: absolute;
+  top: 82.96px;
+  left: 17px;
+  width: 260px;
+  height: 89.15px;
+  font-size: 31px;
+}
+.welcome {
+  top: 0;
+  font-size: 25px;
+  font-weight: 300;
+  display: inline-block;
+  width: 132px;
+  height: 47.05px;
+}
+.email,
+.instance-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.email {
+  height: 26.09%;
+  width: 92.2%;
+  display: inline-block;
+}
+.instance-child {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-white);
+  border: 0.6px solid var(--color-gray-100);
+  box-sizing: border-box;
+}
+.enter-your-user {
+  position: absolute;
+  top: 32.2%;
+  left: 6.38%;
+  font-weight: 300;
+}
+.rectangle-group {
+  position: absolute;
+  height: 64.13%;
+  width: 100%;
+  top: 35.87%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-darkgray);
+}
+.email-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 423px;
+  height: 113.92px;
+}
+.invisible-1-icon {
+  position: absolute;
+  top: 64.39px;
+  left: 374px;
+  width: 21px;
+  height: 26px;
+  overflow: hidden;
+}
+.group-item,
+.instance-parent {
+  position: absolute;
+  top: 160.97px;
+  left: 0;
+  width: 423px;
+  height: 113.92px;
+}
+.group-item {
+  top: 3.71px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 15px;
+  height: 18.57px;
+}
+.forgot-password,
+.remember-me {
+  position: absolute;
+  top: 2.48px;
+  left: 25px;
+  font-weight: 300;
+  display: inline-block;
+  width: 90px;
+  height: 22.29px;
+}
+.forgot-password {
+  top: 0;
+  left: 315px;
+  color: #4d4d4d;
+  width: 108px;
+}
+.group-div {
+  position: absolute;
+  top: 303.37px;
+  left: 0;
+  width: 423px;
+  height: 24.76px;
+  font-size: var(--font-size-xs);
+}
+.group-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-mediumturquoise);
+  width: 237px;
+  height: 71px;
+}
+.login1 {
+  position: absolute;
+  top: 21px;
+  left: 93px;
+  font-weight: 500;
+  display: inline-block;
+  width: 107.88px;
+  height: 30px;
+}
+.rectangle-parent1 {
+  position: absolute;
+  top: 369.87px;
+  left: 93px;
+  width: 237px;
+  height: 71px;
+}
+.component-parent {
+  position: absolute;
+  top: 231.55px;
+  left: 17px;
+  width: 423px;
+  height: 440.87px;
+}
+.dont-have-an {
+  font-weight: 300;
+}
+.span {
+  font-weight: 600;
+  color: var(--color-black);
+}
+.dont-have-an-container {
+  position: absolute;
+  top: 774.42px;
+  left: 0;
+  display: inline-block;
+  width: 194px;
+  height: 29.72px;
+  color: #201f1f;
+}
+.span1 {
+  font-weight: 600;
+}
+.register {
+  position: absolute;
+  top: 774.42px;
+  left: 200px;
+  display: inline-block;
+  width: 64px;
+  height: 29.72px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.group-parent {
+  position: absolute;
+  top: 44.58px;
+  left: 18px;
+  width: 440px;
+  height: 804.14px;
+}
+.login-inner,
+.rectangle-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 505px;
+  height: 868px;
+}
+.login-inner {
+  top: 93px;
+  left: 1298px;
+}
+.google-logo-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.sign-in-with {
+  position: relative;
+}
+.google-button {
+  position: absolute;
+  top: 899px;
+  left: 1590px;
+  border-radius: 4px;
+  background-color: var(--color-black);
+  width: 193px;
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-sizing: border-box;
+  gap: 6px;
+  opacity: 0.8;
+  color: var(--color-white);
+}
+.login {
+  position: relative;
+  background-color: var(--color-mediumturquoise);
+  width: 100%;
+  height: 1020px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}

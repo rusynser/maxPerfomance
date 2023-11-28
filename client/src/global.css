@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #56E0E0;
+}
+.navbar-icon {
+  background-color: #56E0E0;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+.input-text {
+  position: relative;
+  line-height: 24px;
+  display: none;
+}
+.Search5 {
+  position: absolute;
+  top: 15px;
+  left: 500px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  border: 2px solid var(--medium-gray);
+  box-sizing: border-box;
+  width: 479px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-base);
+  gap: var(--gap-base);
+  text-align: left;
+}
+.background-icon {
+  background-color: #56E0E0;
+  position: absolute;
+  top: 129px;
+  left: 0;
+  width: 100%;
+  height: 891px;
+}
+:root {
+  /* fonts */
+  --button: "Open Sans";
+
+  /* font sizes */
+  --button-size: 16px;
+
+  /* Colors */
+  --white: #fff;
+  --black: #000;
+  --medium-gray: #b2b9c0;
+  --dark-gray: #495057;
+
+  /* Gaps */
+  --gap-base: 16px;
+
+  /* Paddings */
+  --padding-base: 16px;
+
+  /* Border radiuses */
+  --br-5xs: 8px;
+}
