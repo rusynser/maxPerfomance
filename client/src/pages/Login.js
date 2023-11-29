@@ -14,9 +14,7 @@ const Login = () => {
     <div className="login">
       <img
         className="image-2-icon"
-        alt=""
-        src="/image-2@2x.png"
-        onClick={onImage2Click}
+        src="/MaxPerformance1.png"
       />
       <img className="login-child" alt="" src="/rectangle-14.svg" />
       <div className="login-inner">
@@ -38,25 +36,27 @@ const Login = () => {
               </div>
               <div className="instance-parent">
                 <div className="email-parent">
-                  <div className="email">Password</div>
-                  <div className="rectangle-group">
+                  <div className="PasswordText">Password</div>
+                  <div className="Password">
                     <div className="instance-child" />
-                    <div className="enter-your-user">Enter your Password</div>
+                    <input className="PasswordInput" placeholder="Enter your password"/>
                   </div>
                 </div>
                 <img
-                  className="invisible-1-icon"
+                  className="eye"
                   alt=""
-                  src="/invisible-1.svg"
+                  src="/show.png"
                 />
               </div>
-              <div className="group-div">
-                <div className="group-item" />
+              <div className="checkbox-parent">
+                <div className="checkbox">
+                  <div className="checkbox-base" />
+                </div>
                 <div className="remember-me">Remember me</div>
                 <div className="forgot-password">Forgot Password ?</div>
               </div>
-              <div className="rectangle-parent1">
-                <div className="group-inner" />
+              <div className="group-div">
+                <div className="LoginButton" />
                 <div className="login1">Login</div>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Login = () => {
         </div>
       </div>
       <div className="google-button">
-        <img className="google-logo-icon" alt="" src="/google-logo.svg" />
+        <img className="google-logo-icon" alt="" src="/google.png" />
         <div className="sign-in-with">Sign in with Google</div>
       </div>
     </div>

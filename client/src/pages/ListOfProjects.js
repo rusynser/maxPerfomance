@@ -76,10 +76,13 @@ const ListOfProjects = () => {
           src="/avatar.svg"
           onClick={openFrame}
         />
+        <Link to="/registration">
         <button className="SignButton" onClick={onFixedButtonContainer2Click}>
           <div className="Sign">Sign in</div>
         </button>
+        </Link>
       </div>
+      
       {isFrameOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"

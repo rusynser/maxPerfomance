@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import "./Registration.css";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   const onAlreadyHaveAnClick = useCallback(() => {
@@ -20,14 +21,14 @@ const Registration = () => {
                 <div className="user-name">User name</div>
                 <div className="rectangle-group">
                   <div className="instance-child" />
-                  <div className="enter-your-user">Enter your user name</div>
+                  <input className="enter-your-user" placeholder="Enter your user name" />
                 </div>
               </div>
               <div className="email-parent">
                 <div className="user-name">Email</div>
                 <div className="rectangle-group">
                   <div className="instance-child" />
-                  <div className="enter-your-user">Enter your email</div>
+                  <input className="enter-your-user" placeholder="Enter your email" />
                 </div>
               </div>
               <div className="instance-group">
@@ -35,13 +36,13 @@ const Registration = () => {
                   <div className="user-name">Password</div>
                   <div className="rectangle-group">
                     <div className="instance-child" />
-                    <div className="enter-your-user">Enter your Password</div>
+                    <input className="enter-your-user" placeholder="Enter password" />
                   </div>
                 </div>
                 <img
                   className="invisible-1-icon"
                   alt=""
-                  src="/invisible-1.svg"
+                  src="/show.png"
                 />
               </div>
               <div className="instance-container">
@@ -49,13 +50,13 @@ const Registration = () => {
                   <div className="user-name">Confirm Password</div>
                   <div className="rectangle-group">
                     <div className="instance-child" />
-                    <div className="enter-your-user">Confirm your Password</div>
+                    <input className="enter-your-user" placeholder="Confirm password" />
                   </div>
                 </div>
                 <img
                   className="invisible-1-icon1"
                   alt=""
-                  src="/invisible-11.svg"
+                  src="/show.png"
                 />
               </div>
               <div className="rectangle-parent2">
@@ -68,34 +69,26 @@ const Registration = () => {
               onClick={onAlreadyHaveAnClick}
             >
               <span className="already-have-an">Already have an Account ?</span>
-              <span className="sign-in"> Sign in</span>
+              <Link to="/login">
+              <button className="sign-in"> Sign in</button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="registration-child" />
-      <div className="registration-item" />
+      <div className="rectangle-Select">
+      <select className="SelectRole">
+        <option>Freelancer</option>
+        <option>Customer</option>
+      </select>
+      </div>
       <img
         className="maxperformance1-3-icon"
         alt=""
-        src="/maxperformance1-3@2x.png"
+        src="/maxperformance1-2@2x.png"
       />
-      <div className="settings">
-        <img className="icon" alt="" src="/icon.svg" />
-        <div className="role">Role</div>
-        <img className="icons" alt="" src="/icons.svg" />
-        <img className="icons1" alt="" src="/icons1.svg" />
-      </div>
-      <div className="team-sub-menu-wrapper">
-        <div className="team-sub-menu" />
-      </div>
-      <div className="engineering">
-        <div className="customer">Customer</div>
-      </div>
-      <div className="analytics">
-        <div className="freelancer">Freelancer</div>
-      </div>
-      <img className="divider-icon" alt="" src="/divider.svg" />
+     
+    
     </div>
   );
 };

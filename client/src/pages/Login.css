@@ -5,7 +5,7 @@
   width: 1249px;
   height: 1020px;
   object-fit: cover;
-  cursor: pointer;
+  
 }
 .group-child,
 .login-child {
@@ -19,8 +19,7 @@
   top: 0;
   left: 0;
   border-radius: var(--br-3xs);
-  background-color: var(--color-white);
-  box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
   border: 0.5px solid #878787;
   box-sizing: border-box;
   width: 505px;
@@ -35,13 +34,13 @@
 .sign-in {
   top: 0;
   font-weight: 500;
-  width: 105px;
+  width: 107.42px;
   height: 58.2px;
 }
 .lorem-ipsum-is {
   top: 59.44px;
   font-size: var(--font-size-base);
-  width: 260px;
+  width: 266px;
   height: 29.72px;
 }
 .sign-in-parent,
@@ -49,7 +48,7 @@
   position: absolute;
   top: 82.96px;
   left: 17px;
-  width: 260px;
+  width: 266px;
   height: 89.15px;
   font-size: 31px;
 }
@@ -64,35 +63,39 @@
 .email,
 .instance-child {
   position: absolute;
-  top: 0;
   left: 0;
 }
-.email {
-  height: 26.09%;
-  width: 92.2%;
+.PasswordText {
+  position: absolute;
+  height: 26.33%;
+  width: 18.2%;
+  top: 70px;
   display: inline-block;
 }
 .instance-child {
   height: 100%;
   width: 100%;
+  top: 0;
   right: 0;
   bottom: 0;
   border-radius: var(--br-7xs);
-  background-color: var(--color-white);
+  background-color: var(--white);
   border: 0.6px solid var(--color-gray-100);
   box-sizing: border-box;
 }
-.enter-your-user {
+.PasswordInput {
   position: absolute;
   top: 32.2%;
   left: 6.38%;
   font-weight: 300;
+  border: none;
+  font-size: 20px;
 }
-.rectangle-group {
+.Password {
   position: absolute;
   height: 64.13%;
   width: 100%;
-  top: 35.87%;
+  top: 100px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -106,15 +109,14 @@
   width: 423px;
   height: 113.92px;
 }
-.invisible-1-icon {
+.eye {
   position: absolute;
-  top: 64.39px;
-  left: 374px;
-  width: 21px;
-  height: 26px;
+  top: 115px;
+  left: 365px;
+  width: 43px;
+  height: 39px;
   overflow: hidden;
 }
-.group-item,
 .instance-parent {
   position: absolute;
   top: 160.97px;
@@ -122,13 +124,25 @@
   width: 423px;
   height: 113.92px;
 }
-.group-item {
-  top: 3.71px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+.checkbox-base {
+  position: relative;
+  border-radius: var(--br-9xs);
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
   box-sizing: border-box;
-  width: 15px;
-  height: 18.57px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.checkbox {
+  position: absolute;
+  top: 3.51px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .forgot-password,
 .remember-me {
@@ -146,7 +160,7 @@
   color: #4d4d4d;
   width: 108px;
 }
-.group-div {
+.checkbox-parent {
   position: absolute;
   top: 303.37px;
   left: 0;
@@ -154,10 +168,19 @@
   height: 24.76px;
   font-size: var(--font-size-xs);
 }
-.group-inner {
+.LoginButton {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-mediumturquoise);
+  width: 237px;
+  height: 71px;
+}
+.group-div {
+  position: absolute;
+  top: 0;
+  left: 35px;
   border-radius: var(--br-3xs);
   background-color: var(--color-mediumturquoise);
   width: 237px;
@@ -165,17 +188,17 @@
 }
 .login1 {
   position: absolute;
+  left: 140px;
+}
+.login1 {
   top: 21px;
-  left: 93px;
   font-weight: 500;
   display: inline-block;
-  width: 107.88px;
+  width: 46px;
   height: 30px;
 }
-.rectangle-parent1 {
-  position: absolute;
+.group-div {
   top: 369.87px;
-  left: 93px;
   width: 237px;
   height: 71px;
 }
@@ -201,12 +224,13 @@
   width: 194px;
   height: 29.72px;
   color: #201f1f;
+  cursor: pointer;
 }
 .span1 {
   font-weight: 600;
 }
 .register {
-  position: absolute;
+  
   top: 774.42px;
   left: 200px;
   display: inline-block;
@@ -246,7 +270,7 @@
   position: absolute;
   top: 899px;
   left: 1590px;
-  border-radius: 4px;
+  border-radius: var(--br-9xs);
   background-color: var(--color-black);
   width: 193px;
   height: 43px;
@@ -258,7 +282,8 @@
   box-sizing: border-box;
   gap: 6px;
   opacity: 0.8;
-  color: var(--color-white);
+  color: var(--white);
+  cursor: pointer;
 }
 .login {
   position: relative;
