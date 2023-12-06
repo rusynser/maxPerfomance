@@ -14,54 +14,54 @@ const Registration = () => {
           <div className="group-child" />
           <div className="group-parent">
             <div className="registration-wrapper">
-              <div className="registration1">{`Registration  `}</div>
+              Registration
             </div>
             <div className="instance-parent">
               <div className="user-name-parent">
                 <div className="user-name">User name</div>
                 <div className="rectangle-group">
-                  <div className="instance-child" />
-                  <input className="enter-your-user" placeholder="Enter your user name" />
+                  <div className="instanceUser" />
+                  <input className="enterUser" placeholder="Enter your user name" />
                 </div>
               </div>
               <div className="email-parent">
-                <div className="user-name">Email</div>
+                <div className="Email">Email</div>
                 <div className="rectangle-group">
                   <div className="instance-child" />
-                  <input className="enter-your-user" placeholder="Enter your email" />
+                  <input className="enterEmail" placeholder="Enter your email" />
                 </div>
               </div>
               <div className="instance-group">
                 <div className="password-parent">
-                  <div className="user-name">Password</div>
+                  <div className="Password">Password</div>
                   <div className="rectangle-group">
                     <div className="instance-child" />
-                    <input className="enter-your-user" placeholder="Enter password" />
+                    <input type="password" className="enterPassword" placeholder="Enter password" />
                   </div>
                 </div>
                 <img
-                  className="invisible-1-icon"
+                  className="eyeIcon"
                   alt=""
                   src="/show.png"
                 />
               </div>
-              <div className="instance-container">
+              <div className="groupConfirm">
                 <div className="password-parent">
-                  <div className="user-name">Confirm Password</div>
+                  <div className="confirmPassword">Confirm password</div>
                   <div className="rectangle-group">
                     <div className="instance-child" />
-                    <input className="enter-your-user" placeholder="Confirm password" />
+                    <input type="password" className="enterConfirm" placeholder="Confirm password" />
                   </div>
                 </div>
                 <img
-                  className="invisible-1-icon1"
+                  className="eyeConfirm"
                   alt=""
                   src="/show.png"
                 />
               </div>
               <div className="rectangle-parent2">
                 <div className="group-item" />
-                <div className="register">Register</div>
+                <button className="register"><p className="registerText">Register</p></button>
               </div>
             </div>
             <div
