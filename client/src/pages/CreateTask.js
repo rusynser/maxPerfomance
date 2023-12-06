@@ -65,6 +65,13 @@ const CreateProject = () => {
           onClick={openFrame}
         />
           <input  className="project-name"  placeholder="Task name"/>
+          <select className="TimeSelect" placeholder="Time">
+        <option>Time</option>
+        <option>1</option>
+        <option>3</option>
+        <option>5</option>
+        <option>12</option>
+      </select>
           <div className="header-info" >
             <div className="project-name1" onClick={onProjectNameText1Click}>
             </div>
@@ -80,6 +87,18 @@ const CreateProject = () => {
           </button>
           <button className="wontHave" onClick={onFixedButtonContainerClick}>
           <div className="wontHaveText">Won't have</div>
+          </button>
+          <button className="Initial" onClick={onFixedButtonContainerClick}>
+          <div className="mustHaveText">Initial</div>
+          </button>
+          <button className="Waiting" onClick={onFixedButtonContainerClick}>
+          <div className="shouldHaveText">Waiting</div>
+          </button>
+          <button className="Progress" onClick={onFixedButtonContainerClick}>
+          <div className="couldHaveText">In progress</div>
+          </button>
+          <button className="Solved" onClick={onFixedButtonContainerClick}>
+          <div className="wontHaveText">Solved</div>
           </button>
           <input  className="description1"  placeholder="Description"/>
           <Link to="/list-of-tasks">

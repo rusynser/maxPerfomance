@@ -103,7 +103,7 @@
   position: absolute;
   width: 400px;
   height: 80px;
-  top: -230px;
+  top: 0px;
   left: 0px;
   font-weight: 300;
   border-width: 1px;
@@ -143,9 +143,9 @@
   height: 27px;
   overflow: hidden;
 }
-.eyeConfirm {
+.eyeConfirmReg {
   position: absolute;
-  top: 45px;
+  top: 70px;
   left: 363.07px;
   width: 31px;
   height: 27px;

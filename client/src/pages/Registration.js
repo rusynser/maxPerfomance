@@ -54,7 +54,7 @@ const Registration = () => {
                   </div>
                 </div>
                 <img
-                  className="eyeConfirm"
+                  className="eyeConfirmReg"
                   alt=""
                   src="/show.png"
                 />

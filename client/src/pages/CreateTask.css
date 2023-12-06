@@ -118,7 +118,7 @@
 .description1 {
   border: none;
   position: absolute;
-  top: 359px;
+  top: 430px;
   left: 46px;
   line-height: 24px;
   color: var(--color-gray-100);
@@ -150,13 +150,6 @@
   line-height: 24px;
   color: #cbcccb;
   font-size: 50px;
-}
-.iconhamburger {
-  position: absolute;
-  top: 13px;
-  left: -1px;
-  width: 42px;
-  height: 44px;
 }
 .project-name1 {
   position: relative;
@@ -372,7 +365,7 @@
   top: 250px;
   left: 200px;
   border-radius: var(--br-5xs);
-  background-color: li;
+  background-color: #39C1FB;
   width: 150px;
   height: 60px;
   overflow: hidden;
@@ -399,4 +392,57 @@
   height: 60px;
   overflow: hidden;
   cursor: pointer;
+}
+.Initial {
+  position: absolute;
+  top: 330px;
+  left: 40px;
+  border-radius: var(--br-5xs);
+  background-color: white;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Waiting {
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  border-radius: var(--br-5xs);
+  background-color: orange;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Progress {
+  position: absolute;
+  top: 330px;
+  left: 360px;
+  border-radius: var(--br-5xs);
+  background-color: lightgreen;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Solved {
+  position: absolute;
+  top: 330px;
+  left: 520px;
+  border-radius: var(--br-5xs);
+  background-color: #24FF00;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.TimeSelect {
+  position: absolute;
+  left: 45px;
+  top: 500px;
+  font-size: x-large;
+  width: 390px;
+  border-radius: 10px;
+  border-width: 1px;
 }

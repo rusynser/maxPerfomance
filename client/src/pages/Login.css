@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:client/src/pages/Login.css
+
 .group-child {
   position: absolute;
   top: 0;
@@ -60,7 +60,7 @@
   border-radius: 15px;
   font-size: 30px;
 }
-.enterEmail {
+.enterEmailLogin {
   position: absolute;
   width: 400px;
   height: 80px;
@@ -382,8 +382,6 @@ background-color: white;
   top: -100px;
   left: 30px;
 }
-
-========
 .group-child {
   position: absolute;
   top: 0;
@@ -702,4 +700,3 @@ background-color: white;
   color: var(--color-gray-200);
   font-family: var(--font-manrope);
 }
->>>>>>>> main:client/src/pages/Registration.css
