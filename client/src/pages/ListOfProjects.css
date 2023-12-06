@@ -56,6 +56,18 @@
   overflow: hidden;
   cursor: pointer;
 }
+.ProjectBack {
+  position: absolute;
+  top: 250px;
+  left: 45px;
+  border-radius: var(--br-5xs);
+  border: 2px solid gray;
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+  width: 1400px;
+  height: 80%;
+}
 .AzText {
   position: relative;
   top: calc(50% - 15px);

@@ -54,6 +54,7 @@ const ListOfProjects = () => {
   return (
     <>
       <div className="list-of-projects">
+      
         <div className="navbar-icon">
         <input type="search" className="Search5"/>
         </div>
@@ -76,13 +77,13 @@ const ListOfProjects = () => {
           src="/avatar.svg"
           onClick={openFrame}
         />
-        <Link to="/registration">
+        <Link to="/login">
         <button className="SignButton" onClick={onFixedButtonContainer2Click}>
           <div className="Sign">Sign in</div>
         </button>
         </Link>
       </div>
-      
+      <div className="ProjectBack"></div>
       {isFrameOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"

@@ -87,7 +87,7 @@ const CreateProject = () => {
           </button>
           </Link>
         </div>
-        <Link to="/registration">
+        <Link to="/login">
         <button className="SignButton" onClick={onFixedButtonContainer1Click}>
           <div className="Sign">Sign in</div>
         </button>

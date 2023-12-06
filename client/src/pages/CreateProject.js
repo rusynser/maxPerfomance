@@ -76,9 +76,11 @@ const CreateProject = () => {
           </button>
           </Link>
         </div>
+        <Link to="/login">
         <button className="SignButton" onClick={onFixedButtonContainer1Click}>
           <div className="Sign">Sign in</div>
         </button>
+        </Link>
         <img
           className="maxperformance1-2-icon"
           alt=""
