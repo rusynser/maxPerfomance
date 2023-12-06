@@ -11,6 +11,7 @@
   font-size: var(--h4-size);
   line-height: 48px;
   font-weight: 600;
+  display: none;
 }
 .span {
   font-size: var(--body-1-size);
@@ -96,7 +97,7 @@
   background-color: var(--white);
   border: 2px solid var(--medium-gray);
   box-sizing: border-box;
-  width: 1897px;
+  width: 1400px;
   height: 793px;
   display: flex;
   flex-direction: column;
@@ -112,158 +113,43 @@
 }
 .span1 {
   color: var(--black);
-  font-size: var(--font-size-45xl);
+  font-size: 64px;
 }
-.time {
+.description1 {
+  border: none;
   position: absolute;
-  top: 580px;
-  left: 27px;
+  top: 359px;
+  left: 46px;
   line-height: 24px;
-  color: var(--color-gray-100);
+  color: gray;
+  font-size: 30px;
 }
-.oval-icon {
-  position: relative;
-  width: 3px;
-  height: 2.97px;
-}
-.arrow-down,
-.arrow-down1,
-.arrow-down11,
-.arrow-down2 {
-  position: absolute;
-  top: 142px;
-  left: 1875px;
-  width: 61px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-2xs) var(--padding-8xs);
-  box-sizing: border-box;
-  gap: var(--gap-9xs);
-  transform: rotate(90deg);
-  transform-origin: 0 0;
-}
-.arrow-down1,
-.arrow-down11,
-.arrow-down2 {
-  top: 247px;
-  left: 1874px;
-}
-.arrow-down11,
-.arrow-down2 {
-  top: 366px;
-  left: 1875px;
-}
-.arrow-down11 {
-  top: 483px;
-}
-.description {
-  position: absolute;
-  top: 459px;
-  left: 34px;
-  line-height: 24px;
-  color: var(--color-gray-100);
-}
-.frame-child,
-.frame-item {
+.frame-child {
   position: absolute;
   top: 121px;
   left: 0;
   width: 1381px;
   height: 456px;
 }
-.frame-item {
-  top: 413px;
-  width: 1888px;
-  height: 2px;
-}
-.frame-child1,
 .frame-inner,
-.vector-icon {
+.frame-item {
   position: absolute;
-  top: 545px;
-  left: 15px;
+  top: 212px;
+  left: -1px;
   width: 1873px;
   height: 2px;
 }
-.frame-child1,
-.vector-icon {
-  top: 657px;
-  left: 24px;
-  width: 1864px;
+.frame-inner {
+  top: 349px;
 }
-.frame-child1 {
-  top: 211.5px;
-  left: 15px;
-  width: 1873px;
-}
-.label1 {
+.project-name {
   position: absolute;
-  top: calc(50% - 8px);
-  left: calc(50% - 20px);
-  line-height: 100%;
-  font-weight: 600;
-}
-.fixed-button {
-  position: absolute;
-  top: 134px;
-  left: 1695px;
-  border-radius: var(--br-5xs);
-  background-color: var(--color-lime);
-  border: 1px solid var(--black);
-  box-sizing: border-box;
-  width: 144px;
-  height: 40px;
-  overflow: hidden;
-  text-align: center;
-  font-size: var(--body-1-size);
-}
-.label2 {
-  position: absolute;
-  top: calc(50% - 8px);
-  left: calc(50% - 29px);
-  line-height: 100%;
-  font-weight: 600;
-}
-.fixed-button1 {
-  position: absolute;
-  top: 248px;
-  left: 39px;
-  border-radius: var(--br-5xs);
-  background-color: var(--color-lime);
-  border: 1px solid var(--black);
-  box-sizing: border-box;
-  width: 144px;
-  height: 40px;
-  overflow: hidden;
-  text-align: center;
-  font-size: var(--body-1-size);
-}
-.name-icon,
-.profile-picture-icon {
-  position: absolute;
-  top: 311px;
-  left: 24px;
-  width: 79px;
-  height: 79px;
-}
-.name-icon {
-  top: 338.65px;
-  left: 118.8px;
-  width: 153.23px;
-  height: 22.87px;
-}
-.tags,
-.task-name1 {
-  position: absolute;
+  border: none;
   top: 145px;
   left: 34px;
   line-height: 24px;
-}
-.tags {
-  top: 797px;
-  left: 1734px;
+  color: black;
+  font-size: 50px;
 }
 .iconhamburger {
   position: absolute;
@@ -272,33 +158,28 @@
   width: 42px;
   height: 44px;
 }
+.project-name1 {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+}
 .header-info {
   position: absolute;
   top: 23px;
   left: 0;
   width: 1233px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.iconchat-alt,
 .social-media-post-cardyesno-parent {
   position: absolute;
   top: 100px;
   left: 44px;
   width: 1888px;
   height: 797px;
-}
-.iconchat-alt {
-  top: 889px;
-  left: 279px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-.comments {
-  position: absolute;
-  top: 897px;
-  left: 77px;
-  line-height: 24px;
-  font-size: var(--h4-size);
+  font-size: var(--font-size-21xl);
 }
 .white-space {
   position: absolute;
@@ -342,10 +223,11 @@
   gap: var(--gap-base);
 }
 .avatar-icon {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+  position: absolute ;
+  top: -60px;
+  left: 1170px;
+  width: 57px;
+  height: 57px;
 }
 .actions {
   position: absolute;
@@ -377,29 +259,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 32px;
-  font-size: var(--body-1-size);
 }
-.label3 {
-  position: absolute;
-  top: calc(50% - 8px);
-  left: calc(50% - 26px);
-  line-height: 100%;
-  font-weight: 600;
-}
-.fixed-button2 {
-  position: absolute;
-  top: 31px;
-  left: 1793px;
-  border-radius: var(--br-5xs);
-  background-color: var(--white);
-  width: 144px;
-  height: 40px;
-  overflow: hidden;
-  cursor: pointer;
-  text-align: center;
-  font-size: var(--body-1-size);
-}
-.image-2-icon,
 .maxperformance1-2-icon {
   position: absolute;
   top: 0;
@@ -408,28 +268,161 @@
   height: 179px;
   object-fit: cover;
 }
-.image-2-icon {
-  left: 319px;
-  width: 1431px;
-  height: 1270px;
-  opacity: 0.08;
-}
-.project-name {
+.label3 {
   position: absolute;
-  top: 137px;
-  left: 50px;
-  line-height: 24px;
+  top: calc(50% - 8px);
+  left: calc(50% - 55px);
+  line-height: 100%;
   font-weight: 600;
-  cursor: pointer;
 }
-.task-view {
+.fixed-button2 {
+  position: absolute;
+  top: 866px;
+  left: 1729px;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-mediumturquoise);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  width: 162px;
+  height: 62px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+.create-project {
   position: relative;
   background-color: var(--white);
   width: 100%;
   height: 1020px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--font-size-21xl);
+  font-size: var(--body-1-size);
   color: var(--black);
   font-family: var(--body-1);
+}
+.cansel {
+  position: absolute;
+  top: 800px;
+  left: 100px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.canselText {
+  position:relative;
+  top: calc(50% - 25px);
+  left:20;
+  line-height: 100%;
+  font-weight: 600;
+  font-size: 15px;
+}
+.Sign {
+  position: relative;
+  top: calc(50% - 15px);
+  left: 1px;
+  line-height: 100%;
+  font-weight: 600;
+}
+.SignButton {
+  position: absolute;
+  top: 50px;
+  left: 1300px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.createNewTask {
+  position: absolute;
+  top: 900px;
+  left: 1250px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.createTaskText {
+  position: relative;
+  top: calc(50% - 25px);
+  left: 1px;
+  line-height: 100%;
+  font-weight: 600;
+}
+.mustHave {
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  border-radius: var(--br-5xs);
+  background-color: yellow;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.shouldHave {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  border-radius: var(--br-5xs);
+  background-color: li;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.couldHave {
+  position: absolute;
+  top: 250px;
+  left: 360px;
+  border-radius: var(--br-5xs);
+  background-color: orange;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.wontHave {
+  position: absolute;
+  top: 250px;
+  left: 520px;
+  border-radius: var(--br-5xs);
+  background-color: red;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.avatarTask {
+  position: absolute ;
+  top: 430px;
+  left: 40px;
+  width: 57px;
+  height: 57px;
+}
+.Username {
+  position: absolute;
+  top: 445px;
+  left: 130px;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 30px;
+}
+.TimeTask {
+  position: absolute;
+  top: 540px;
+  left: 50px;
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 30px;
 }

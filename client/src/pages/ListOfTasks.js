@@ -35,6 +35,7 @@ const ListOfProjects = () => {
       }
     };
   }, []);
+  
 
   const onFixedButtonClick = useCallback(() => {
     // Please sync "Create project" to the project
@@ -53,6 +54,7 @@ const ListOfProjects = () => {
   }, []);
   return (
     <>
+    
       <div className="list-of-projects">
         <div className="navbar-icon">
         <input type="search" className="Search5"/>
@@ -79,9 +81,11 @@ const ListOfProjects = () => {
           src="/avatar.svg"
           onClick={openFrame}
         />
+        <Link to="/registration">
         <button className="SignButton" onClick={onFixedButtonContainer2Click}>
           <div className="Sign">Sign in</div>
         </button>
+        </Link>
       </div>
       {isFrameOpen && (
         <PortalPopup

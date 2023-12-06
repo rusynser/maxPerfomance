@@ -3,40 +3,57 @@
   top: 0;
   left: 0;
   border-radius: 10px;
-  background-color: var(--color-white);
+  background-color: white;
   box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
   border: 0.5px solid #878787;
   box-sizing: border-box;
   width: 504px;
   height: 1019px;
 }
-.registration-wrapper,
-.registration1 {
+.registration-wrapper {
+  border-radius: 10px;
   position: absolute;
   top: 0;
   width: 188.63px;
   height: 60.85px;
-}
-.registration1 {
   left: 0;
   font-weight: 500;
   display: inline-block;
+  font-size: 35px;
 }
-.registration-wrapper {
-  left: 0.07px;
-  font-size: 31px;
+.Email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 92.2%;
+  display: inline-block;
+  font-size: 25px;
 }
-.instance-child,
 .user-name {
   position: absolute;
   top: 0;
   left: 0;
-}
-.user-name {
   width: 92.2%;
   display: inline-block;
+  font-size: 25px;
 }
-.instance-child {
+.Password {
+  position: absolute;
+  top: -45px;
+  left: 5px;
+  width: 92.2%;
+  display: inline-block;
+  font-size: 25px;
+}
+.confirmPassword {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  width: 92.2%;
+  display: inline-block;
+  font-size: 25px;
+}
+.instanceUser {
   height: 100%;
   width: 100%;
   right: 0;
@@ -46,11 +63,53 @@
   border: 0.6px solid var(--color-gray-100);
   box-sizing: border-box;
 }
-.enter-your-user {
+.enterUser {
   position: absolute;
-  top: 32.2%;
-  left: 6.38%;
+  width: 400px;
+  height: 80px;
+  top: 0px;
+  left: 0px;
   font-weight: 300;
+  border-width: 1px;
+  border-color: #282828;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.enterPassword {
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  top: -45px;
+  left: 0px;
+  font-weight: 300;
+  border-width: 1px;
+  border-color: #282828;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.enterConfirm {
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  top: 0px;
+  left: 0px;
+  font-weight: 300;
+  border-width: 1px;
+  border-color: #282828;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.enterEmail {
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  top: -230px;
+  left: 0px;
+  font-weight: 300;
+  border-width: 1px;
+  border-color: #282828;
+  border-radius: 15px;
+  font-size: 20px;
 }
 .rectangle-group {
   position: absolute;
@@ -63,8 +122,6 @@
   font-size: var(--font-size-sm);
   color: var(--color-darkgray);
 }
-.email-parent,
-.password-parent,
 .user-name-parent {
   position: absolute;
   top: 136px;
@@ -72,16 +129,23 @@
   width: 422.16px;
   height: 119.1px;
 }
-.email-parent,
 .password-parent {
   top: 0;
 }
 .password-parent {
   left: 0;
 }
-.invisible-1-icon {
+.eyeIcon {
   position: absolute;
-  top: 67.24px;
+  top: 25px;
+  left: 363.07px;
+  width: 31px;
+  height: 27px;
+  overflow: hidden;
+}
+.eyeConfirm {
+  position: absolute;
+  top: 45px;
   left: 363.07px;
   width: 31px;
   height: 27px;
@@ -93,6 +157,13 @@
   left: 0;
   width: 422.16px;
   height: 119.1px;
+}
+.groupConfirm {
+  position: absolute;
+  top: 550px;
+  left: 0;
+  width: 422.16px;
+  height: 50px;
 }
 .invisible-1-icon1 {
   position: absolute;
@@ -118,12 +189,22 @@
 }
 .register {
   position: absolute;
-  top: 22.01px;
-  left: 178.65px;
-  font-weight: 500;
-  display: inline-block;
-  width: 65.87px;
-  height: 31.07px;
+  top: 2px;
+  left: 100px;
+  width: 200px;
+  height: 50px;
+  font-size: 40px;
+  border-width: 1.5px;
+  border-color: black;
+  border-radius: 10px;
+  background-color: #56E0E0;
+  cursor: pointer;
+}
+.registerText{
+  top: -8px;
+  left: 60px;
+  position: absolute;
+  font-size: 20px;
 }
 .instance-parent,
 .rectangle-parent2 {
@@ -142,8 +223,16 @@
   font-weight: 300;
 }
 .sign-in {
+  left: 180px;
+  top: 3px;
   font-weight: 600;
   color: var(--color-black);
+  border: none;
+  width: 70px;
+  height: 10px;
+  cursor: pointer;
+color: black;
+background-color: white;
 }
 .already-have-an-container {
   position: absolute;
@@ -166,7 +255,7 @@
 .registration-inner {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -250px;
   width: 504px;
   height: 1019px;
 }
@@ -196,10 +285,10 @@
 }
 .maxperformance1-3-icon {
   position: absolute;
-  top: 0;
-  left: 990px;
+  top: -20px;
+  left: 750px;
   width: 259px;
-  height: 293px;
+  height: 280px;
   object-fit: cover;
 }
 .icon,
@@ -316,3 +405,14 @@
   color: var(--color-gray-200);
   font-family: var(--font-manrope);
 }
+.SelectRole {
+  position: absolute;
+  left: 525px;
+  bottom: 570px;
+  font-size: x-large;
+  width: 390px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: hidden ;
+}
+
