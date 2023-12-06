@@ -21,7 +21,7 @@ const Registration = () => {
                 <div className="Email">Email</div>
                 <div className="rectangle-group">
                  
-                  <input className="enterEmail" placeholder="Enter your email" />
+                  <input className="enterEmailLogin" placeholder="Enter your email" />
                 </div>
               </div>
               <div className="instance-group">

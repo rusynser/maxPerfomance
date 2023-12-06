@@ -81,7 +81,7 @@ const ListOfProjects = () => {
           src="/avatar.svg"
           onClick={openFrame}
         />
-        <Link to="/registration">
+        <Link to="/login">
         <button className="SignButton" onClick={onFixedButtonContainer2Click}>
           <div className="Sign">Sign in</div>
         </button>
