@@ -73,7 +73,7 @@
   border-width: 1px;
   border-color: #282828;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .enterPassword {
   position: absolute;
@@ -85,7 +85,7 @@
   border-width: 1px;
   border-color: #282828;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .enterConfirm {
   position: absolute;
@@ -97,7 +97,7 @@
   border-width: 1px;
   border-color: #282828;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .enterEmail {
   position: absolute;
@@ -109,7 +109,7 @@
   border-width: 1px;
   border-color: #282828;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .rectangle-group {
   position: absolute;
@@ -198,12 +198,13 @@
   border-color: black;
   border-radius: 10px;
   background-color: #56E0E0;
+  cursor: pointer;
 }
 .registerText{
-  top: -23px;
-  left: 45px;
+  top: -8px;
+  left: 60px;
   position: absolute;
-  font-size: 30px;
+  font-size: 20px;
 }
 .instance-parent,
 .rectangle-parent2 {

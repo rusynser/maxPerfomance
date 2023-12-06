@@ -61,7 +61,9 @@ const Registration = () => {
               </div>
               <div className="rectangle-parent2">
                 <div className="group-item" />
+                <Link to="/login">
                 <button className="register"><p className="registerText">Register</p></button>
+                </Link>
               </div>
             </div>
             <div
