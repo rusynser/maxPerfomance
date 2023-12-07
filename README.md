@@ -8,7 +8,6 @@ FOR Front:
   cd Client
 			
 	 npm install
-
 	 npm start
 
 FOR Back:
