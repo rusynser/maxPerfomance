@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+
+  <!-- Project Form -->
+  <form id="createProjectForm">
+    <h2>Create Project</h2>
+    <label for="projectName">Project Name:</label>
+    <input type="text" id="projectName" name="projectName" required>
+    <button type="button" onclick="createProject()">Create Project</button>
+  </form>
+
+  <!-- Task Form -->
+  <form id="createTaskForm">
+    <h2>Create Task</h2>
+    <label for="taskName">Task Name:</label>
+    <input type="text" id="taskName" name="taskName" required>
+    <label for="solver">Solver:</label>
+    <input type="text" id="solver" name="solver" required>
+    <label for="complexity">Complexity:</label>
+    <input type="text" id="complexity" name="complexity" required>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+    <label for="priority">Priority:</label>
+    <input type="text" id="priority" name="priority" required>
+    <label for="comment">Comment:</label>
+    <textarea id="comment" name="comment" required></textarea>
+    <button type="button" onclick="createTask()">Create Task</button>
+  </form>
+
+  <!-- Assign Responsible Form -->
+  <form id="assignResponsibleForm">
+    <h2>Assign Responsible Freelancer</h2>
+    <label for="taskId">Task ID:</label>
+    <input type="text" id="taskId" name="taskId" required>
+    <label for="freelancerId">Freelancer ID:</label>
+    <input type="text" id="freelancerId" name="freelancerId" required>
+    <button type="button" onclick="assignResponsible()">Assign Responsible Freelancer</button>
+  </form>
+
+  <script>
+    // Replace these URLs with your actual API endpoints
+    const apiUrl = 'http://localhost:3000';
+
+    async function createProject() {
+      const projectName = document.getElementById('projectName').value;
+
+      try {
+        const response = await fetch(`${apiUrl}/projects/create-project`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ projectName }),
+        });
+
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        console.error('Error creating project:', error);
+        alert('Error creating project. Please check the console for details.');
+      }
+    }
+
+    async function createTask() {
+      const projectId = ''; // Set the actual project ID
+      const taskName = document.getElementById('taskName').value;
+      const solver = document.getElementById('solver').value;
+      const complexity = document.getElementById('complexity').value;
+      const description = document.getElementById('description').value;
+      const state = document.getElementById('state').value;
+      const priority = document.getElementById('priority').value;
+      const comment = document.getElementById('comment').value;
+
+      try {
+        const response = await fetch(`${apiUrl}/tasks/create-task/${projectId}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ taskName, solver, complexity, description, state, priority, comment }),
+        });
+
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        console.error('Error creating task:', error);
+        alert('Error creating task. Please check the console for details.');
+      }
+    }
+
+    async function assignResponsible() {
+      const taskId = document.getElementById('taskId').value;
+      const freelancerId = document.getElementById('freelancerId').value;
+
+      try {
+        const response = await fetch(`${apiUrl}/tasks/assign-responsible/${taskId}/${freelancerId}`, {
+          method: 'PUT',
+        });
+
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        console.error('Error assigning responsible freelancer:', error);
+        alert('Error assigning responsible freelancer. Please check the console for details.');
+      }
+    }
+  </script>
+</body>
+</html>

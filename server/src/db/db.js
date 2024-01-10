@@ -1,8 +1,7 @@
 import { MongoClient } from 'mongodb';
-import mongoose from 'mongoose';
 const uri = "mongodb+srv://maxPerformanceDB:maxPerformance123@maxperformance.f203yk9.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
-const dbname='maxPerformance';
+const dbName='maxPerformance';
 
 
  async function  dbconnect(){
@@ -26,4 +25,4 @@ async function  dbclose() {
 }
 
 
-export {dbconnect,client,dbname,dbclose};
+export {dbconnect,client,dbName,dbclose};
