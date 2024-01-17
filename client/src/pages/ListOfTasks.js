@@ -1,104 +1,48 @@
-import { useState, useCallback, useEffect } from "react";
-import Frame from "../components/Frame";
-import PortalPopup from "../components/PortalPopup";
-import "./ListOfTasks.css";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import './ListOfTasks.css'; // Import your CSS styles as needed
 
-const ListOfProjects = () => {
-  const [isFrameOpen, setFrameOpen] = useState(false);
+const ListOfTasks = () => {
+  const { projectId } = useParams(); // Get projectId from URL
+  const [tasks, setTasks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    const scrollAnimElements = document.querySelectorAll(
-      "[data-animate-on-scroll]"
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            const targetElement = entry.target;
-            targetElement.classList.add("animate");
-            observer.unobserve(targetElement);
-          }
-        }
-      },
-      {
-        threshold: 0.15,
+    const fetchTasks = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch(`http://localhost:3000/tasks/${projectId}`);
+        const data = await response.json();
+        setTasks(data);
+      } catch (error) {
+        console.error('Error fetching tasks:', error);
+        // Handle error, e.g., show an error message to the user
       }
-    );
-
-    for (let i = 0; i < scrollAnimElements.length; i++) {
-      observer.observe(scrollAnimElements[i]);
-    }
-
-    return () => {
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.unobserve(scrollAnimElements[i]);
-      }
+      setIsLoading(false);
     };
-  }, []);
-  
 
-  const onFixedButtonClick = useCallback(() => {
-    // Please sync "Create project" to the project
-  }, []);
+    fetchTasks();
+  }, [projectId]);
 
-  const openFrame = useCallback(() => {
-    setFrameOpen(true);
-  }, []);
+  if (isLoading) {
+    return <div>Loading tasks...</div>; // Or any loading spinner
+  }
 
-  const closeFrame = useCallback(() => {
-    setFrameOpen(false);
-  }, []);
-
-  const onFixedButtonContainer2Click = useCallback(() => {
-    // Please sync "Login" to the project
-  }, []);
   return (
-    <>
-    
-      <div className="list-of-projects">
-        <div className="navbar-icon">
-        <input type="search" className="Search5"/>
-        </div>
-        <div className="background-icon"></div>
-        <button className="fixed-button0" onClick={onFixedButtonClick}>
-          <div className="AzText">A-Z</div>
-        </button>
-        <button className="priorityButton" onClick={onFixedButtonClick}>
-          <div className="priorityText">Priority</div>
-        </button>
-        <button className="state" onClick={onFixedButtonClick}>
-          <div className="StateText">State</div>
-        </button>       
-          <Link to="/create-task">
-  <button className="createTask" onClick={onFixedButtonClick}>
-  <div className="AzText">Create Task</div>
-</button>
-</Link>
-        <a className="maxperformance1-1" data-animate-on-scroll />
-        <img
-          className="avatar-icon"
-          alt=""
-          src="/avatar.svg"
-          onClick={openFrame}
-        />
-        <Link to="/login">
-        <button className="SignButton" onClick={onFixedButtonContainer2Click}>
-          <div className="Sign">Sign in</div>
-        </button>
-        </Link>
-      </div>
-      {isFrameOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closeFrame}
-        >
-          <Frame onClose={closeFrame} />
-        </PortalPopup>
-      )}
-    </>
-  );
+    <div>
+      <h2>Tasks for Project {projectId}</h2>
+      <ul>
+
+
+
+    {tasks.map(task => (
+      <li key={task._id}>{task.taskName}</li>
+    ))}
+  </ul>
+  <Link to={`/projects/${projectId}/create-task`}>Create New Task</Link>
+</div>
+
+);
 };
 
-export default ListOfProjects;
-
+export default ListOfTasks;

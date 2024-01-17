@@ -4,7 +4,7 @@ import PortalPopup from "../components/PortalPopup";
 import "./CreateTask.css";
 import { Link } from "react-router-dom";
 
-const CreateProject = () => {
+const CreateTask = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
 
   const onProjectNameText1Click = useCallback(() => {
@@ -134,4 +134,4 @@ const CreateProject = () => {
   );
 };
 
-export default CreateProject;
+export default CreateTask;

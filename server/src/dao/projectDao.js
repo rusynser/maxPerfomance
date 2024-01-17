@@ -16,10 +16,22 @@ class ProjectDao {
     const collection = database.collection(projectsCollection);
     return collection.findOne({ projectName });
   }
+
   static async getProjectsByCustomer(customerId) {
     const database = client.db(dbName);
     const collection = database.collection(projectsCollection);
     return collection.find({ customerId }).toArray();
+  }
+
+  static async getAllProjects() {
+    const database = client.db(dbName);
+    const collection = database.collection(projectsCollection);
+    return collection.find().toArray();
+  }
+static async getProjectById(projectId) {
+    const database = client.db(dbName);
+    const collection = database.collection(projectsCollection);
+    return collection.findOne({ _id: projectId(projectId) }); // Assuming you are using ObjectId for the ID
   }
   // Add other project-related DAO methods here
 }

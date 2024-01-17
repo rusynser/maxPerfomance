@@ -1,67 +1,51 @@
-import { useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ListOfProjects from "./pages/ListOfProjects";
 import ListOfTasks from "./pages/ListOfTasks";
 import TaskView from "./pages/TaskView";
 import CreateTask from "./pages/CreateTask";
 import CreateProject from "./pages/CreateProject";
 import Login from "./pages/Login";
-import Registration from "./pages/Registration"
-
+import Registration from "./pages/Registration";
 
 function App() {
-  const action = useNavigationType();
   const location = useLocation();
   const pathname = location.pathname;
 
+  useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
+    // Set document title and meta description based on the current route
+    const routeTitles = {
+      '/': 'Home',
+      '/login': 'Login',
+      '/registration': 'Registration',
+      // Add more routes and titles as needed
+    };
+    const title = routeTitles[pathname] || 'Default Title';
+    document.title = title;
 
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
+    // You can also set meta descriptions similarly
+    // const metaDescription = routeDescriptions[pathname] || 'Default Description';
+    // Update the metaDescriptionTag content here
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<ListOfProjects />} />
-      <Route path="/list-of-tasks" element={<ListOfTasks />} />
-      <Route path="/task-view" element={<TaskView />} />
-      <Route path="/create-task" element={<CreateTask />} />
-      <Route path="/create-project" element={<CreateProject />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/registration" element={<Registration />} />
-    </Routes>
+    
+      <Routes>
+        <Route path="/" element={<ListOfProjects />} />
+        <Route path="/projects/:projectId/tasks" element={<ListOfTasks />} />
+        <Route path="/projects/:projectId/tasks/view/:taskId" element={<TaskView />} />
+        <Route path="/projects/:projectId/create-task" element={<CreateTask />} />
+        <Route path="/create-project" element={<CreateProject />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
+      </Routes>
+
   );
 }
+
 export default App;

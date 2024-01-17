@@ -1,30 +1,50 @@
-// dao/taskDao.js
 import { client, dbName } from '../db/db.js';
+import { ObjectId } from 'mongodb';
 
 const tasksCollection = 'tasks';
+const projectsCollection = 'projects'; // Assuming this is your projects collection
 
 class TaskDao {
-  static async createTaskInProject(projectId, task) {
+  // Method to create a task and add it to a project
+  static async createTaskAndAddToProject(projectId, task) {
     const database = client.db(dbName);
-    const collection = database.collection(tasksCollection);
-    task.projectId = projectId; // Associate the task with the project
-    const result = await collection.insertOne(task);
-    return result.insertedId;
-  }
-  static async createTask(projectId, task) {
-    const database = client.db(dbName);
-    const collection = database.collection(tasksCollection);
-    task.projectId = projectId;
-    const result = await collection.insertOne(task);
-    return result.insertedId;
+    const tasksCol = database.collection(tasksCollection);
+    const projectsCol = database.collection(projectsCollection);
+
+    // Add projectId to the task
+    task.projectId = new ObjectId(projectId);
+
+    // Create the task
+    const taskResult = await tasksCol.insertOne(task);
+    const taskId = taskResult.insertedId;
+
+    // Add the task ID to the project's tasks array
+    await projectsCol.updateOne(
+      { _id: new ObjectId(projectId) },
+      { $push: { tasks: taskId } }
+    );
+
+    return taskId;
   }
 
+  // Method to get tasks by project ID
+  static async getTasksByProject(projectId) {
+    const database = client.db(dbName);
+    const collection = database.collection(tasksCollection);
+    return collection.find({ projectId: new ObjectId(projectId) }).toArray();
+  }
+
+  // Method to assign a responsible person to a task
   static async assignResponsible(taskId, freelancerId) {
     const database = client.db(dbName);
     const collection = database.collection(tasksCollection);
-    return collection.updateOne({ _id: taskId }, { $set: { responsibleFreelancerId: freelancerId } });
+    return collection.updateOne(
+      { _id: new ObjectId(taskId) },
+      { $set: { responsibleFreelancerId: freelancerId } }
+    );
   }
-  // Add other task-related DAO methods here
+
+  // Add other task-related DAO methods as needed
 }
 
 export default TaskDao;

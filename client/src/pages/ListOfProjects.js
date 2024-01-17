@@ -6,35 +6,22 @@ import { Link } from "react-router-dom";
 
 const ListOfProjects = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
+  const [projects, setProjects] = useState([]);
+
   useEffect(() => {
-    const scrollAnimElements = document.querySelectorAll(
-      "[data-animate-on-scroll]"
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            const targetElement = entry.target;
-            targetElement.classList.add("animate");
-            observer.unobserve(targetElement);
-          }
-        }
-      },
-      {
-        threshold: 0.15,
-      }
-    );
-
-    for (let i = 0; i < scrollAnimElements.length; i++) {
-      observer.observe(scrollAnimElements[i]);
-    }
-
-    return () => {
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.unobserve(scrollAnimElements[i]);
-      }
-    };
+    fetchProjects();
   }, []);
+
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/projects');
+      const projectsData = await response.json();
+      setProjects(projectsData);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+      // Handle error, e.g., show an error message to the user
+    }
+  };
 
   const onFixedButtonClick = useCallback(() => {
     // Please sync "Create project" to the project
@@ -51,12 +38,12 @@ const ListOfProjects = () => {
   const onFixedButtonContainer2Click = useCallback(() => {
     // Please sync "Login" to the project
   }, []);
+
   return (
     <>
       <div className="list-of-projects">
-      
         <div className="navbar-icon">
-        <input type="search" className="Search5"/>
+          <input type="search" className="Search5" />
         </div>
         <div className="background-icon"></div>
         <button className="fixed-button0" onClick={onFixedButtonClick}>
@@ -64,12 +51,12 @@ const ListOfProjects = () => {
         </button>
         <button className="state" onClick={onFixedButtonClick}>
           <div className="StateText">State</div>
-        </button>       
-          <Link to="/create-project">
-  <button className="createProject" onClick={onFixedButtonClick}>
-  <div className="AzText">Create project</div>
-</button>
-</Link>
+        </button>
+        <Link to="/create-project">
+          <button className="createProject" onClick={onFixedButtonClick}>
+            <div className="AzText">Create project</div>
+          </button>
+        </Link>
         <a className="maxperformance1-1" data-animate-on-scroll />
         <img
           className="avatar-icon"
@@ -78,12 +65,22 @@ const ListOfProjects = () => {
           onClick={openFrame}
         />
         <Link to="/login">
-        <button className="SignButton" onClick={onFixedButtonContainer2Click}>
-          <div className="Sign">Sign in</div>
-        </button>
+          <button
+            className="SignButton"
+            onClick={onFixedButtonContainer2Click}
+          >
+            <div className="Sign">Sign in</div>
+          </button>
         </Link>
       </div>
-      <div className="ProjectBack"></div>
+      <div className="ProjectBack">
+        <ul className="project-list">
+          {projects.map((project) => (
+            <li key={project._id}>
+              <Link to={`/projects/${project._id}/tasks`}>{project.projectName}</Link>            </li>
+          ))}
+        </ul>
+      </div>
       {isFrameOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"
@@ -98,4 +95,3 @@ const ListOfProjects = () => {
 };
 
 export default ListOfProjects;
-

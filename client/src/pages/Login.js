@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 
-const Registration = () => {
+const Login = () => {
   const onAlreadyHaveAnClick = useCallback(() => {
     // Please sync "Login" to the project
   }, []);
@@ -61,4 +61,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Login;

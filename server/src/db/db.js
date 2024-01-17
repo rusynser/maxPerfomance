@@ -4,7 +4,7 @@ const client = new MongoClient(uri);
 const dbName='maxPerformance';
 
 
- async function  dbconnect(){
+ async function  connectToDatabase(){
   try {
     await client.connect();
     console.log('Connected to the database');
@@ -14,7 +14,7 @@ const dbName='maxPerformance';
   }
 }
 
-async function  dbclose() {
+async function  closeDatabaseConnection() {
   try {
     await client.close();
     console.log('Database connection closed');
@@ -25,4 +25,4 @@ async function  dbclose() {
 }
 
 
-export {dbconnect,client,dbName,dbclose};
+export {connectToDatabase,client,dbName,closeDatabaseConnection};
