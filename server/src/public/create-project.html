@@ -1,0 +1,50 @@
+<!-- public/create-project.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Project</title>
+</head>
+<body>
+  <h2>Create Project</h2>
+
+  <form id="createProjectForm">
+    <label for="projectName">Project Name:</label>
+    <input type="text" id="projectName" name="projectName" required>
+    
+    <label for="projectDescription">Project Description:</label>
+    <textarea id="projectDescription" name="projectDescription" required></textarea>
+
+    <button type="button" onclick="createProject()">Create Project</button>
+  </form>
+
+  <script>
+    // JavaScript function to handle creating a project
+    function createProject() {
+      const projectName = document.getElementById('projectName').value;
+      const projectDescription = document.getElementById('projectDescription').value;
+
+      // Perform validation if needed
+
+      // Make a POST request to the server
+      fetch('http://localhost:3000/projects/create-project', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ projectName, projectDescription }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Project created successfully:', data);
+        // Handle success, e.g., redirect to a different page or show a success message
+      })
+      .catch(error => {
+        console.error('Error creating project:', error);
+        // Handle error, e.g., show an error message to the user
+      });
+    }
+  </script>
+</body>
+</html>

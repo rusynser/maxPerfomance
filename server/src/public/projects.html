@@ -1,0 +1,35 @@
+<!-- public/projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+</head>
+<body>
+  <h1>Projects</h1>
+  <button onclick="redirectToCreateProject()">Create Project</button>
+  <ul id="projectList"></ul>
+
+  <script>
+    // Fetch and display projects
+    fetchProjects();
+
+    async function fetchProjects() {
+      const response = await fetch('/projects');
+      const projects = await response.json();
+
+      const projectList = document.getElementById('projectList');
+      projects.forEach(project => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="/project/${project._id}">${project.projectName}</a>`;
+        projectList.appendChild(listItem);
+      });
+    }
+
+    function redirectToCreateProject() {
+      window.location.href = '/create-project'; // Update with the actual URL
+    }
+  </script>
+</body>
+</html>
