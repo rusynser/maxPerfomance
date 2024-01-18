@@ -56,7 +56,7 @@ const CreateProject = () => {
     <>
       <div className="create-project">
         <div className="navbar-icon">
-          <input type="search" className="Search5" />
+          <input type="search" className="Search-create-project" />
         </div>
         <div className="background-icon"></div>
         <div className="rec" />
