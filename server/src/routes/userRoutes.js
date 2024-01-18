@@ -4,7 +4,9 @@ import UserDao from '../dao/userDao.js';
 
 const router = express.Router();
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
+  console.log(req.oidc.isAuthenticated());
+
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 

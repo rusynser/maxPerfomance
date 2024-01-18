@@ -8,8 +8,9 @@ import taskRoutes from './routes/taskRoutes.js';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
 import { auth } from 'express-openid-connect';
-import dotenv from config();
- 
+
+
+
 const app = express();
 const port = 3000;
 
@@ -18,16 +19,15 @@ const __dirname = path.dirname(__filename);
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: process.env.SECRET,
-  baseURL:process.env.BASEURL,
-  clientID:process.env.CLIENTID,
-  issuerBaseURL:process.env.ISSUEURL,
+  secret: 'aongrandomly-generatedstringstoredinenv3213121sadfasd',
+  baseURL:'http://localhost:3000',
+  clientID:'sQ3zq8Lzfu1UMXLiTBb9CSreqCMz5xzm',
+  issuerBaseURL:'https://dev-drk1k1tvctqtzovb.us.auth0.com',
 };
 
 
 
 app.use(express.json());
-//app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(auth(config));
 // Connect to the database
