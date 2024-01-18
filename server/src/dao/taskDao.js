@@ -2,8 +2,8 @@ import { client, dbName } from '../db/db.js';
 import { ObjectId } from 'mongodb';
 
 const tasksCollection = 'tasks';
-const projectsCollection = 'projects'; // Assuming this is your projects collection
-
+const projectsCollection = 'projects'; 
+// Assuming this is your projects collection
 class TaskDao {
   // Method to create a task and add it to a project
   static async createTaskAndAddToProject(projectId, task) {
@@ -31,8 +31,10 @@ class TaskDao {
   static async getTasksByProject(projectId) {
     const database = client.db(dbName);
     const collection = database.collection(tasksCollection);
-    return collection.find({ projectId: new ObjectId(projectId) }).toArray();
-  }
+    // Query using projectId as a string
+    return collection.find({ projectId: projectId }).toArray();
+}
+
 
   // Method to assign a responsible person to a task
   static async assignResponsible(taskId, freelancerId) {
@@ -43,7 +45,14 @@ class TaskDao {
       { $set: { responsibleFreelancerId: freelancerId } }
     );
   }
-
+  static async createTask(taskData) {
+  
+      const database = client.db(dbName);
+      const collection = database.collection(tasksCollection);
+      const result=await collection.insertOne(taskData)
+      return result.insertedId;
+  }
+      
   // Add other task-related DAO methods as needed
 }
 

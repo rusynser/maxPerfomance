@@ -129,9 +129,6 @@ const CreateProject = () => {
             }
             createProject();
           }}
-
-
-
         >
           <div className="createProjectText">Create Project</div>
         </button>

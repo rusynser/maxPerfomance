@@ -13,6 +13,8 @@
   left: 0;
   width: 100%;
   height: 70px;
+  object-fit: cover;
+  z-index: 1;
 }
 .input-text {
   position: relative;
@@ -44,6 +46,7 @@
   left: 0;
   width: 100%;
   height: 891px;
+  overflow: auto;
 }
 .fixed-button0 {
   position: absolute;
@@ -56,6 +59,7 @@
   overflow: hidden;
   cursor: pointer;
 }
+
 .ProjectBack {
   position: absolute;
   top: 250px;
@@ -64,9 +68,9 @@
   border: 2px solid gray;
   background-color: white;
   position: absolute;
-  overflow: hidden;
-  width: 1400px;
-  height: 80%;
+  overflow-y: auto;
+  width: 94%;
+  height: 100%;
 }
 .AzText {
   position: relative;
@@ -169,4 +173,46 @@
   left: 1px;
   line-height: 100%;
   font-weight: 600;
+}
+
+.project-list {
+  position: absolute;
+  top: auto;
+  max-width: 300px; 
+  margin: 20px; 
+  list-style-type: none;
+  font-size: 25px;
+  padding: 25px;
+  text-decoration: none;
+}
+
+.project-list a {
+  text-decoration: none; /* Убрать подчеркивание у ссылок */
+  transition: color 0.3s ease;
+  color: black; 
+}
+
+.project-list li {
+  border: 1px solid #ccc; /* рамка для каждого элемента списка */
+  margin-bottom: 40px; /* отступ снизу для каждого элемента списка */
+  padding: 10px; /* внутренний отступ для текста внутри каждого элемента списка */
+  border-radius: 4px; /* скругление углов рамки */
+}
+
+  .description {
+    margin-top: 10px;
+    padding: 50px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 50px;
+  }
+
+.maxperformance1-2-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 179px;
+  height: 179px;
+  z-index: 2;
 }

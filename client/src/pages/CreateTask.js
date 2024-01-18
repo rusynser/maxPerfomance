@@ -1,136 +1,115 @@
-import { useState, useCallback } from "react";
-import Frame from "../components/Frame";
-import PortalPopup from "../components/PortalPopup";
-import "./CreateTask.css";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const CreateTask = () => {
-  const [isFrameOpen, setFrameOpen] = useState(false);
+  const { projectId } = useParams();
+  const navigate = useNavigate();
 
-  const onProjectNameText1Click = useCallback(() => {
-    // Please sync "List of Projects" to the project
-  }, []);
+  const [taskData, setTaskData] = useState({
+    taskName: '',
+    solver: '',
+    complexity: 0,
+    description: '',
+    state: 0,
+    priority: 0,
+    comment: '',
+    time: 0
+  });
 
-  const onFixedButtonContainerClick = useCallback(() => {
-    // Please sync "Task View" to the project
-  }, []);
+  const handleChange = (e) => {
+    setTaskData({ ...taskData, [e.target.name]: e.target.value });
+  };
 
-  const openFrame = useCallback(() => {
-    setFrameOpen(true);
-  }, []);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const closeFrame = useCallback(() => {
-    setFrameOpen(false);
-  }, []);
+    try {
+      const response = await fetch('http://localhost:3000/tasks/create-task', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ...taskData, projectId })
+      });
 
-  const onFixedButtonContainer1Click = useCallback(() => {
-    // Please sync "Login" to the project
-  }, []);
+      if (!response.ok) {
+        throw new Error('Failed to create task');
+      }
 
-  const onFixedButtonContainer2Click = useCallback(() => {
-    // Please sync "List of Projects" to the project
-  }, []);
+      await response.json();
+      navigate(`/projects/${projectId}/tasks`);
+    } catch (error) {
+      console.error('Error creating task:', error);
+    }
+  };
 
   return (
-    <>
-      <div className="create-project">
-      <div className="navbar-icon">
-        <input type="search" className="Search5"/>
-        </div>
-        <div className="background-icon"></div>
-        <div className="rec" />
-        <div className="social-media-post-cardyesno-parent">
-          <div className="social-media-post-cardyesno">
-            <div className="task-name" /> 
-            <img
-              className="social-media-post-cardyesno-child"
-              alt=""
-              src="/vector-12.svg"
-            />
-            <div className="footer">
-              <div className="share-button">
-                <img
-                  className="share-android-icon"
-                  alt=""
-                  src="/vector-12.svg"
-                />
-                <div className="label">Share</div>
-              </div>
-            </div>
-          </div>
-          <img
-          className="avatar-icon"
-          alt=""
-          src="/avatar.svg"
-          onClick={openFrame}
+    <div className="create-task-container">
+      <h1>Create Task</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="taskName"
+          value={taskData.taskName}
+          onChange={handleChange}
+          placeholder="Task Name"
+          required
         />
-          <input  className="project-name"  placeholder="Task name"/>
-          <select className="TimeSelect" placeholder="Time">
-        <option>Time</option>
-        <option>1</option>
-        <option>3</option>
-        <option>5</option>
-        <option>12</option>
-      </select>
-          <div className="header-info" >
-            <div className="project-name1" onClick={onProjectNameText1Click}>
-            </div>
-          </div>
-          <button className="mustHave" onClick={onFixedButtonContainerClick}>
-          <div className="mustHaveText">Must have</div>
-          </button>
-          <button className="shouldHave" onClick={onFixedButtonContainerClick}>
-          <div className="shouldHaveText">Should have</div>
-          </button>
-          <button className="couldHave" onClick={onFixedButtonContainerClick}>
-          <div className="couldHaveText">Could Have</div>
-          </button>
-          <button className="wontHave" onClick={onFixedButtonContainerClick}>
-          <div className="wontHaveText">Won't have</div>
-          </button>
-          <button className="Initial" onClick={onFixedButtonContainerClick}>
-          <div className="mustHaveText">Initial</div>
-          </button>
-          <button className="Waiting" onClick={onFixedButtonContainerClick}>
-          <div className="shouldHaveText">Waiting</div>
-          </button>
-          <button className="Progress" onClick={onFixedButtonContainerClick}>
-          <div className="couldHaveText">In progress</div>
-          </button>
-          <button className="Solved" onClick={onFixedButtonContainerClick}>
-          <div className="wontHaveText">Solved</div>
-          </button>
-          <input  className="description1"  placeholder="Description"/>
-          <Link to="/list-of-tasks">
-          <button className="cansel" onClick={onFixedButtonContainerClick}>
-          <div className="canselText">Cansel</div>
-          </button>
-          </Link>
-        </div>
-        <Link to="/registration">
-        <button className="SignButton" onClick={onFixedButtonContainer1Click}>
-          <div className="Sign">Sign in</div>
-        </button>
-        </Link>
-        <img
-          className="maxperformance1-2-icon"
-          alt=""
-          src="/maxperformance1-2@2x.png"
+        <input
+          name="solver"
+          value={taskData.solver}
+          onChange={handleChange}
+          placeholder="Solver"
+          required
         />
-        <button className="createNewTask" onClick={onFixedButtonContainer2Click}>
-          <div className="createTaskText">Create Task</div>
-        </button>
-      </div>
-      {isFrameOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closeFrame}
-        >
-          <Frame onClose={closeFrame} />
-        </PortalPopup>
-      )}
-    </>
+        <input
+          type="number"
+          name="complexity"
+          value={taskData.complexity}
+          onChange={handleChange}
+          placeholder="Complexity"
+          required
+        />
+        <textarea
+          name="description"
+          value={taskData.description}
+          onChange={handleChange}
+          placeholder="Description"
+          required
+        />
+        <input
+          type="number"
+          name="state"
+          value={taskData.state}
+          onChange={handleChange}
+          placeholder="State"
+          required
+        />
+        <input
+          type="number"
+          name="priority"
+          value={taskData.priority}
+          onChange={handleChange}
+          placeholder="Priority"
+          required
+        />
+        <textarea
+          name="comment"
+          value={taskData.comment}
+          onChange={handleChange}
+          placeholder="Comment"
+          required
+        />
+        <input
+          type="number"
+          name="time"
+          value={taskData.time}
+          onChange={handleChange}
+          placeholder="Time"
+          required
+        />
+        <button type="submit">Create Task</button>
+      </form>
+    </div>
   );
 };
 
