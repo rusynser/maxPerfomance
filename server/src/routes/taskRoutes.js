@@ -4,13 +4,12 @@ import TaskDao from '../dao/taskDao.js';
 
 const router = express.Router();
 
-router.post('/create-task/:projectId', async (req, res) => {
+router.post('/create-task', async (req, res) => {
   try {
-    const { taskName, solver, complexity, description, state, priority, comment } = req.body;
-    const projectId = req.params.projectId;
+    const { projectId, taskName, solver, complexity, description, state, priority, comment } = req.body;
 
-    if (!taskName || !solver || !complexity || !description || !state || !priority || !comment) {
-      return res.status(400).json({ error: 'All task fields are required in the request body' });
+    if (!projectId || !taskName || !solver || !complexity || !description || !state || !priority || !comment) {
+      return res.status(400).json({ error: 'All task fields including projectId are required in the request body' });
     }
 
     const taskId = await TaskDao.createTask({ taskName, solver, complexity, description, state, priority, comment, projectId });

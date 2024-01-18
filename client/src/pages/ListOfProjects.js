@@ -42,6 +42,7 @@ const ListOfProjects = () => {
   return (
     <>
       <div className="list-of-projects">
+        <img className="maxperformance1-2-icon" alt="" src="/maxperformance1-2@2x.png"></img>
         <div className="navbar-icon">
           <input type="search" className="Search5" />
         </div>
@@ -77,7 +78,9 @@ const ListOfProjects = () => {
         <ul className="project-list">
           {projects.map((project) => (
             <li key={project._id}>
-              <Link to={`/projects/${project._id}/tasks`}>{project.projectName}</Link>            </li>
+              <Link to={`/projects/${project._id}/tasks`}>{project.projectName}</Link>  
+              <li key="description">{project.projectDescription}</li>         
+            </li>
           ))}
         </ul>
       </div>
