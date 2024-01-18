@@ -7,18 +7,29 @@ import projectRoutes from './routes/projectRoutes.js';
 import taskRoutes from './routes/taskRoutes.js';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
-
+import { auth } from 'express-openid-connect';
+import dotenv from config();
  
 const app = express();
 const port = 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL:process.env.BASEURL,
+  clientID:process.env.CLIENTID,
+  issuerBaseURL:process.env.ISSUEURL,
+};
+
+
 
 app.use(express.json());
 //app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(cors());
-
+app.use(auth(config));
 // Connect to the database
 connectToDatabase()
   .then(() => {
@@ -26,7 +37,9 @@ connectToDatabase()
     app.use('/users', userRoutes);
     app.use('/projects', projectRoutes);
     app.use('/tasks', taskRoutes);  // Make sure this line is included
-
+    app.get('/', (req, res) => {
+      res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+    });
     const server = app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });
