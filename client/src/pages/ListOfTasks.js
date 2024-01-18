@@ -43,24 +43,35 @@ const ListOfTasks = () => {
   
 
   return (
-    <div>
-      <h2>Tasks for Project {projectName}</h2>
-      <ul>
-
-
-
+   <>
+<div className="list-of-tasks">
+        <img className="maxperformance1-2-icon" alt="" src="/maxperformance1-2@2x.png"></img>
+        <div className="navbar-icon">
+          <input type="search" className="Search-task" />
+        </div>
+        <div className="background-task"></div>
+        </div>
+        
+<div >
+<ul className="task-list">
     {tasks.map(task => (
       <li key={task._id}>
             <h3>{task.taskName}</h3>
-            <p>{task.description}</p>
+            <p className='description-task'>{task.description}</p>
+            <p className='compexity-task'>{task.complexity}</p>
+            <p className='state-task'>{task.state}</p>
+            <p className='comment-task'>{task.comment}</p>
+            <p className='priority-task'>{task.priority}</p>
             {/* Display other task details as needed */}
           </li>    
       ))
     }
   </ul>
+  <button className='createTask'>
   <Link to={`/projects/${projectId}/create-task`}>Create Task</Link>
+  </button>
 </div>
-
+</>
 );
 };
 

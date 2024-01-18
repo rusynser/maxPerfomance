@@ -6,6 +6,24 @@
   width: 1985px;
   height: 920px;
 }
+.Search-create-project {
+  position: absolute;
+  top: 5px;
+  left: 500px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  border: 2px solid var(--medium-gray);
+  box-sizing: border-box;
+  width: 479px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-base);
+  gap: var(--gap-base);
+  text-align: left;
+}
 .task-name {
   position: relative;
   font-size: var(--h4-size);
@@ -116,6 +134,7 @@
   font-size: 64px;
 }
 .description {
+  width: auto;
   border: none;
   position: absolute;
   top: 259px;
@@ -143,6 +162,7 @@
   top: 349px;
 }
 .project-name {
+  width: auto;
   position: absolute;
   border: none;
   top: 145px;

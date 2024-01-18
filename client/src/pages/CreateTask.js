@@ -44,9 +44,27 @@ const CreateTask = () => {
   };
 
   return (
-    <div className="create-task-container">
-      <h1>Create Task</h1>
-      <form onSubmit={handleSubmit}>
+    <>
+    <div className="create-project">
+        <div className="navbar-icon">
+          <input type="search" className="Search-create-task" />
+        </div>
+        <div className="background-icon"></div>
+        <img
+          className="maxperformance1-2-icon"
+          alt=""
+          src="/maxperformance1-2@2x.png"
+        />
+        
+    <div className="create-task-box">
+    <div className="social-media-post-cardyesno">
+            <div className="task-name" />
+            <img
+              className="social-media-post-cardyesno-child"
+              alt=""
+              src="/vector-12.svg"
+            />
+             <form  onSubmit={handleSubmit}>
         <input
           name="taskName"
           value={taskData.taskName}
@@ -107,9 +125,12 @@ const CreateTask = () => {
           placeholder="Time"
           required
         />
-        <button type="submit">Create Task</button>
+        <button className='create-new-task' type="submit">Create Task</button>
       </form>
+            </div>
     </div>
+    </div>
+    </>
   );
 };
 
